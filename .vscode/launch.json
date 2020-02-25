@@ -8,18 +8,14 @@
       "name": "Typescript",
       "type": "node",
       "request": "launch",
-      "runtimeArgs": [
-        "-r",
-        "ts-node/register",
-      ],
+      "runtimeArgs": ["-r", "ts-node/register"],
       "env": {
-        "NODE_ENV": "development"
+        "NODE_ENV": "development",
+        "DEBUG": "express-ts:*"
       },
-      "args": [
-        "${workspaceFolder}/src/index.ts"
-      ],
+      "args": ["${workspaceFolder}/src/bin/www.ts"],
       "protocol": "inspector",
-      "outputCapture": "std",
+      "outputCapture": "std"
     }
   ]
 }
