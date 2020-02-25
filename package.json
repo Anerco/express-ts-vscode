@@ -5,8 +5,6 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "// ------ DEVELOPMENT ----- //": "",
-    "debug": "nodemon src/bin/www.ts",
     "// ------ TESTING ----- //": "",
     "test": "ts-mocha -p tsconfig.json src/**/*.test.ts",
     "// ------ BUILDING ----- //": "",
@@ -15,8 +13,6 @@
     "// ------ LINTING ----- //": "",
     "lint:list": "eslint */**/*.js --fix",
     "lint": "eslint */**/*.js --fix",
-    "// ------ PRODUCTION ----- //": "",
-    "start:prod": "nodemon src/index.ts",
     "// ------ NPM ----- //": "",
     "prepublishOnly": "tsc"
   },
@@ -54,9 +50,8 @@
     "eslint": "^6.8.0",
     "eslint-config-prettier": "^6.10.0",
     "eslint-plugin-prettier": "^3.0.1",
-    "nodemon": "^2.0.2",
     "prettier": "^1.16.4",
-    "ts-node": "^8.0.3",
+    "ts-node-dev": "^1.0.0-pre.44",
     "typescript": "^3.3.3333",
     "supertest": "^4.0.2",
     "mocha": "^7.0.1",
