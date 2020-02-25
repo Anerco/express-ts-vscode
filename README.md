@@ -1,2 +1,2 @@
-# express-ts-vscode
- simple express & typescript vscode boilerplate
+# node-ts-vscode
+ simple node.js & typescript vscode boilerplate

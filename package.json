@@ -1,0 +1,53 @@
+{
+  "name": "express-ts-vscode",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "// ------ DEVELOPMENT ----- //": "",
+    "debug": "nodemon src/index.ts",
+    "convert": "ts-jest config:migrate ./jest.config.js",
+    "// ------ TESTING ----- //": "",
+    "test": "jest --watch",
+    "coverage": "jest --collectCoverageFrom=src/**/*.ts --coverage",
+    "// ------ BUILDING ----- //": "",
+    "build": "tsc",
+    "build:watch": "tsc -w",
+    "// ------ LINTING ----- //": "",
+    "lint:list": "eslint */**/*.js --fix",
+    "lint": "eslint */**/*.js --fix",
+    "// ------ PRODUCTION ----- //": "",
+    "start:prod": "nodemon src/index.ts",
+    "// ------ NPM ----- //": "",
+    "prepublishOnly": "tsc"
+  },
+  "keywords": [
+    "express",
+    "node.js",
+    "vscode",
+    "npm",
+    "eslint",
+    "prettier"
+  ],
+  "author": "Anerco",
+  "license": "MIT",
+  "dependencies": {
+    
+  },
+  "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^2.20.0",
+    "@typescript-eslint/parser": "^2.20.0",
+    "eslint": "^6.8.0",
+    "eslint-config-prettier": "^6.10.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "jest": "^25.1.0",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.16.4",
+    "@types/jest": "^25.1.3",
+    "@types/node": "^13.7.4",
+    "ts-jest": "^25.2.1",
+    "ts-node": "^8.0.3",
+    "typescript": "^3.3.3333"
+  }
+}
