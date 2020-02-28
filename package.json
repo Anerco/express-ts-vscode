@@ -10,14 +10,18 @@
     "// ------ BUILDING ----- //": "",
     "build": "tsc",
     "build:watch": "tsc -w",
+    "// ------ DEV ----- //": "",
+    "dev": "ts-node-dev --inspect --no-notify --respawn --transpileOnly ./src/bin/www.ts",
     "// ------ DEBUGING ----- //": "",
     "docker-debug": "docker-compose -f dc-dev.yml up",
-    "docker-debug-build": "npm test && docker-compose -f dc-dev.yml up --build",
+    "docker-debug-build": "docker-compose -f dc-dev.yml up --build",
     "// ------ LINTING ----- //": "",
     "lint:list": "eslint */**/*.js --fix",
     "lint": "eslint */**/*.js --fix",
     "// ------ NPM ----- //": "",
-    "prepublishOnly": "tsc"
+    "prepublishOnly": "tsc",
+    "// ------ START ----- //": "",
+    "start": "node ./dist/bin/www.js"
   },
   "keywords": [
     "express",
