@@ -2,13 +2,9 @@ import express, { Response, Request } from "express";
 import compression from "compression";
 import createError, { HttpError } from "http-errors";
 import cookieParser from "cookie-parser";
-import logger from "morgan";
 import indexRouter from "./components/index";
 
 const app = express();
-
-// Use Morgan logger
-app.use(logger("dev"));
 
 // Parse URL-encoded bodies (as sent by HTML forms)
 app.use(express.urlencoded({ extended: true }));
