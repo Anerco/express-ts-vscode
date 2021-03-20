@@ -11,7 +11,7 @@
     "build": "tsc",
     "build:watch": "tsc -w",
     "// ------ DEV ----- //": "",
-    "dev": "ts-node-dev --inspect --no-notify --respawn --transpileOnly ./src/bin/www.ts",
+    "dev": "ts-node-dev --inspect --no-notify --respawn --transpile-only ./src/bin/www.ts",
     "// ------ DEBUGING ----- //": "",
     "docker-debug": "docker-compose -f dc-dev.yml up",
     "docker-debug-build": "docker-compose -f dc-dev.yml up --build",
@@ -21,7 +21,7 @@
     "// ------ NPM ----- //": "",
     "prepublishOnly": "tsc",
     "// ------ START ----- //": "",
-    "start": "node ./dist/bin/www.js"
+    "start": "ts-node-dev --max-old-space-size=8192 --inspect --no-notify --respawn --transpile-only ./src/bin/www.ts"
   },
   "keywords": [
     "express",
